@@ -16,3 +16,11 @@ for d in data:
     print(sum_len)
 print('The average length is', sum_len/len(data))#每笔留言长度
 
+#length <100 place in new list
+new = []
+for d in data:
+    if len(d) < 100:
+        new.append(d)
+print('Total of', len(new) , 'comments with a length less than 100 letters')
+print(new[0])
+print(new[1])
