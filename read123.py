@@ -7,9 +7,12 @@ with open('reviews.txt','r') as f:
         if count % 1000 == 0:
             print(len(data)) 
 
-print(len(data))
-print(data[0])
-print('--------------------------')
-print(data[1]) 
+print("Finish reading the file, Total", len(data) , "of files")
 
 # %余数
+sum_len = 0 
+for d in data:
+    sum_len += len(d) #累计每一笔length
+    print(sum_len)
+print('The average length is', sum_len/len(data))#每笔留言长度
+
